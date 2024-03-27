@@ -1,0 +1,21 @@
+﻿@using Ictshop.Models;
+@model List<Hangsanxuat>
+
+
+<br />
+
+<div class="bg-success">
+
+    <h3> DANH MỤC  </h3>
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <li>
+                @*<a href="#">@item.Tenhang</a>*@
+                @Html.ActionLink(item.Tenhang, "ProductCategory", "DanhMuc", new { @Id = item.Mahang }, null);
+            </li>
+        }
+    </div>
+</div>
